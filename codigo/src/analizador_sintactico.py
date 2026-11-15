@@ -1,9 +1,17 @@
-"""Parser predictivo por descenso recursivo para SACgro."""
+"""Parser predictivo por descenso recursivo para AgroReglas."""
 
 from __future__ import annotations
 
 from src.analizador_lexico import Token, analizador_lexico
-from src.nodos_ast import ( Accion, Comparacion, Negacion, NodoAST, OperacionLogica, Programa, Regla,)
+from src.nodos_ast import (
+    Accion,
+    Comparacion,
+    Negacion,
+    NodoAST,
+    OperacionLogica,
+    Programa,
+    Regla,
+)
 
 
 class ErrorSintactico(ValueError):
@@ -15,11 +23,13 @@ class ErrorLimite(ValueError):
 
 
 class AnalizadorSintactico:
-    """Implementa manualmente la gramatica LL(1) de SACgro."""
+    """Implementa manualmente la gramatica LL(1) de AgroReglas."""
 
     def __init__(self, tokens: list[Token]):
         self.tokens = tokens
         self.indice_actual = 0
+        self.regla_actual = 0
+        self.contexto = ""
 
     @property
     def token_actual(self) -> Token:
@@ -37,8 +47,14 @@ class AnalizadorSintactico:
 
         esperado = descripcion or tipo_esperado
         encontrado = self.token_actual.lexema or "fin de entrada"
+        ctx = ""
+        if self.regla_actual > 0:
+            ctx = f" [regla {self.regla_actual}"
+            if self.contexto:
+                ctx += f", {self.contexto}"
+            ctx += "]"
         raise ErrorSintactico(
-            f"Error sintactico en la posicion {self.token_actual.posicion}: "
+            f"Error sintactico en la posicion {self.token_actual.posicion}{ctx}: "
             f"se esperaba {esperado}, pero se encontro '{encontrado}'."
         )
 
@@ -70,10 +86,14 @@ class AnalizadorSintactico:
 
     def regla(self) -> Regla:
         # <regla> -> WHEN <expresion> THEN <lista_acciones> <prioridad> PUNTO_COMA
+        self.regla_actual += 1
+        self.contexto = "condicion"
         self.consumir("WHEN", "la palabra reservada WHEN")
         condicion = self.expresion()
         self.consumir("THEN", "la palabra reservada THEN")
+        self.contexto = "acciones"
         acciones = self.lista_acciones()
+        self.contexto = "prioridad"
         prioridad = self.prioridad()
         self.consumir("PUNTO_COMA", "un punto y coma ';'")
         return Regla(condicion, acciones, prioridad)
@@ -162,3 +182,4 @@ def analizar_texto(cadena: str) -> Programa:
 
     tokens = analizador_lexico(cadena)
     return AnalizadorSintactico(tokens).analizar()
+
