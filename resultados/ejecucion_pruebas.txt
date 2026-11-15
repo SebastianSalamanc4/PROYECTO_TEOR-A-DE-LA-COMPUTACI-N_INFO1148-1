@@ -1,20 +1,20 @@
 python -m unittest discover -v
 
-test_12_entradas_invalidas (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_12_entradas_validas (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_6_casos_limite (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_acciones_y_reglas_se_conservan (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_ast_con_prioridad_de_operadores (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_consola (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_error_localizado (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_extension_de_prioridad_en_ast (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_lexer_conserva_el_material_de_apoyo (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_limites_controlados (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_numero_no_ascii (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_parentesis_cambian_agrupacion (pruebas.test_analizador.PruebasAnalizador) ... ok
-test_saltos_windows (pruebas.test_analizador.PruebasAnalizador) ... ok
+test_12_entradas_invalidas (pruebas.test_analizador.PruebasAnalizador.test_12_entradas_invalidas) ... ok
+test_12_entradas_validas (pruebas.test_analizador.PruebasAnalizador.test_12_entradas_validas) ... ok
+test_6_casos_limite (pruebas.test_analizador.PruebasAnalizador.test_6_casos_limite) ... ok
+test_acciones_y_reglas_se_conservan (pruebas.test_analizador.PruebasAnalizador.test_acciones_y_reglas_se_conservan) ... ok
+test_ast_con_prioridad_de_operadores (pruebas.test_analizador.PruebasAnalizador.test_ast_con_prioridad_de_operadores) ... ok
+test_consola (pruebas.test_analizador.PruebasAnalizador.test_consola) ... ok
+test_error_localizado (pruebas.test_analizador.PruebasAnalizador.test_error_localizado) ... ok
+test_extension_de_prioridad_en_ast (pruebas.test_analizador.PruebasAnalizador.test_extension_de_prioridad_en_ast) ... ok
+test_lexer_conserva_el_material_de_apoyo (pruebas.test_analizador.PruebasAnalizador.test_lexer_conserva_el_material_de_apoyo) ... ok
+test_limites_controlados (pruebas.test_analizador.PruebasAnalizador.test_limites_controlados) ... ok
+test_numero_no_ascii (pruebas.test_analizador.PruebasAnalizador.test_numero_no_ascii) ... ok
+test_parentesis_cambian_agrupacion (pruebas.test_analizador.PruebasAnalizador.test_parentesis_cambian_agrupacion) ... ok
+test_saltos_windows (pruebas.test_analizador.PruebasAnalizador.test_saltos_windows) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.181s
+Ran 13 tests in 0.196s
 
 OK

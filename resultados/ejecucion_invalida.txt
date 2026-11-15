@@ -1,4 +1,4 @@
 python -m src.principal --archivo ../datos/entradas/programa_invalido.agro
 
 ENTRADA INVALIDA
-Error sintactico en la posicion 31: se esperaba un identificador, pero se encontro 'THEN'.
+Error sintactico en la posicion 31 [regla 1, condicion]: se esperaba un identificador, pero se encontro 'THEN'.
