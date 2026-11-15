@@ -1,4 +1,4 @@
-# Gramática formal de AgroReglas
+# Gramática formal de SACgro
 
 Especificación formal que usa `codigo/herramientas/verificar_gramatica.py` para
 comprobar FIRST/FOLLOW y la tabla LL(1) frente al cálculo por punto fijo.

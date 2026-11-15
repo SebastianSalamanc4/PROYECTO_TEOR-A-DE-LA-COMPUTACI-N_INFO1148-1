@@ -1,4 +1,4 @@
-"""Parser predictivo por descenso recursivo para AgroReglas."""
+"""Parser predictivo por descenso recursivo para SACgro."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ class ErrorLimite(ValueError):
 
 
 class AnalizadorSintactico:
-    """Implementa manualmente la gramatica LL(1) de AgroReglas."""
+    """Implementa manualmente la gramatica LL(1) de SACgro."""
 
     def __init__(self, tokens: list[Token]):
         self.tokens = tokens

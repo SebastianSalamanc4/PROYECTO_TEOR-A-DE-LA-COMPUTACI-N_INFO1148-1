@@ -1,2 +1,2 @@
-"""Componentes del analizador sintactico para el lenguaje AgroReglas."""
+"""Componentes del analizador sintactico para el lenguaje SACgro."""
 

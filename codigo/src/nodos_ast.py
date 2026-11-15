@@ -1,4 +1,4 @@
-"""Nodos del arbol de sintaxis abstracta de AgroReglas."""
+"""Nodos del arbol de sintaxis abstracta de SACgro."""
 
 from __future__ import annotations
 

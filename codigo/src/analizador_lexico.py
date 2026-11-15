@@ -23,7 +23,7 @@ class ErrorLexico(ValueError):
 
 
 def analizador_lexico(cadena: str) -> list[Token]:
-    """Convierte una cadena de AgroReglas en una lista de tokens.
+    """Convierte una cadena de SACgro en una lista de tokens.
 
     La estructura principal conserva el analizador lexico del material de apoyo.
     Se agrego la posicion de cada token y un token EOF para facilitar el parser.

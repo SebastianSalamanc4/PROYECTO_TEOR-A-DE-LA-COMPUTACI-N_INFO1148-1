@@ -161,7 +161,7 @@ def generar_grafico(arbol: Programa, ruta_salida: str = "ast") -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Genera una imagen PNG del AST de AgroReglas"
+        description="Genera una imagen PNG del AST de SACgro"
     )
     grupo = parser.add_mutually_exclusive_group(required=True)
     grupo.add_argument("--texto", help="Regla o programa entre comillas")

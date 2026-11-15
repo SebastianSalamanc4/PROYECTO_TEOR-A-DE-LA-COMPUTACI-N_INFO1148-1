@@ -1,4 +1,4 @@
-# AgroReglas
+# SACgro
 
 Analizador sintáctico predictivo (descenso recursivo, gramática LL(1)) para un
 lenguaje pequeño de reglas de automatización de un invernadero.

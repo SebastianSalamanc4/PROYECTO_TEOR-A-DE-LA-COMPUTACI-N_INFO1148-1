@@ -9,7 +9,7 @@ from src.analizador_sintactico import ErrorLimite, ErrorSintactico, analizar_tex
 
 def crear_argumentos() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Analizador sintactico del lenguaje AgroReglas"
+        description="Analizador sintactico del lenguaje SACgro"
     )
     grupo_entrada = parser.add_mutually_exclusive_group(required=True)
     grupo_entrada.add_argument("--texto", help="Regla o programa escrito entre comillas")
