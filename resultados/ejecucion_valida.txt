@@ -1,0 +1,30 @@
+python -m src.principal --archivo ../datos/entradas/programa_valido.agro --mostrar-ast
+
+ENTRADA VALIDA: se reconocieron 3 regla(s).
+
+ARBOL DE SINTAXIS ABSTRACTA
+Programa
+  Regla
+    Condicion
+      OperacionLogica(AND)
+        Comparacion(reserva_agua < 18)
+        Negacion(NOT)
+          Comparacion(mantenimiento == true)
+    Acciones
+      Accion(suspender nebulizacion)
+      Accion(avisar encargado)
+    Prioridad(7)
+  Regla
+    Condicion
+      OperacionLogica(OR)
+        Comparacion(condensacion == true)
+        Comparacion(humedad_aire > 88)
+    Acciones
+      Accion(abrir rejilla_alta)
+  Regla
+    Condicion
+      Comparacion(fuga_detectada == true)
+    Acciones
+      Accion(cerrar valvula)
+      Accion(detener bomba)
+    Prioridad(9)

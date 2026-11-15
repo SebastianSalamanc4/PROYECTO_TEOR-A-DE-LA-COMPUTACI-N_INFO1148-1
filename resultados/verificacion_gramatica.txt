@@ -1,0 +1,6 @@
+No terminales comprobados: 15
+Celdas LL(1) ocupadas: 35
+FIRST/FOLLOW: coinciden con docs/gramatica.md
+Tabla documentada: coincide con el calculo
+Conflictos LL(1): 0
+Comparaciones tabla/parser: 30, sin diferencias
