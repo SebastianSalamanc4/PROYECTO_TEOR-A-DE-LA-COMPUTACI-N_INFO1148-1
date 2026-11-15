@@ -1,4 +1,4 @@
-# SACgro
+﻿# SACgro
 
 Analizador sintáctico predictivo (descenso recursivo, gramática LL(1)) para un
 lenguaje pequeño de reglas de automatización de un invernadero.
@@ -92,7 +92,7 @@ encontrado:
 
 ```text
 ENTRADA INVALIDA
-Error sintactico en la posicion 31: se esperaba un identificador, pero se encontro 'THEN'.
+Error sintactico en la posicion 31 [regla 1, condicion]: se esperaba un identificador, pero se encontro 'THEN'.
 ```
 
 ## Visualización gráfica del AST
