@@ -1,0 +1,4 @@
+WHEN reserva_agua < 18 AND NOT mantenimiento == TRUE THEN suspender nebulizacion AND avisar encargado WITH PRIORITY 7;
+WHEN (condensacion == TRUE OR humedad_aire > 88) THEN abrir rejilla_alta;
+WHEN fuga_detectada == TRUE THEN cerrar valvula AND detener bomba WITH PRIORITY 9;
+

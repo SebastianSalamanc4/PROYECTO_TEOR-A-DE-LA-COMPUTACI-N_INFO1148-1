@@ -1,0 +1,2 @@
+WHEN humedad_sustrato < 26 AND THEN iniciar microgoteo;
+
